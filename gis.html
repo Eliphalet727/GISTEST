@@ -1,0 +1,73 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="新北市3D建物圖"
+    content="initial-scale=1,maximum-scale=1,user-scalable=no"
+  />
+  <title>"新北市3D建物圖"</title>
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+
+  <link
+    rel="stylesheet"
+    href="https://js.arcgis.com/4.28/esri/themes/light/main.css"
+  />
+  <script src="https://js.arcgis.com/4.28/"></script>
+
+  <script>
+    require([
+      "esri/Map",
+      "esri/views/SceneView",
+      "esri/layers/SceneLayer",
+      "esri/widgets/Search" 
+    ], (
+      Map,
+      SceneView,
+      SceneLayer,
+      Search 
+    ) => {
+      const map = new Map({
+        basemap: "osm/streets-relief", 
+        ground: "world-elevation"
+      });
+
+      const view = new SceneView({
+        container: "viewDiv",
+        map: map,
+        camera: {
+          position: [121.5525424, 25.0250296, 707],
+          tilt: 81,
+          heading: 50
+        }
+      });
+
+      const sceneLayer = new SceneLayer({
+        url: "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/5"
+      });
+      map.add(sceneLayer);
+
+      const searchWidget = new Search({
+        view: view
+      });
+
+      view.ui.add(searchWidget, {
+        position: "top-right",
+        index: 0 
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
