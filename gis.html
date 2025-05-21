@@ -52,13 +52,76 @@
   <script>
     esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurOktuVso65_h5t30DueoxvniWhyRImyuVw9iC5hCsYvK-JbAA_QaIyQ1hYLek3gdQq6YOaHmMV2iRS0lWEbkoMFQ35Wd3e7M-Hr4cIizp25VzktN-pqXjikcDap_qvcJ_IKU98scSRKkBOqOZjhKZK7riEXEK3W8hvv5hKe5IUdBKgwGtVBG-0Ik4iJ4Kj7OFr5o10va9-5E_ZmEQaTEAv8.AT1_Xf9yOhyw";
 
+非常抱歉！看來我上一則訊息在提供修正後的程式碼時意外地被截斷了，沒有給出完整的解決方案。
+
+我正要提供修正 Uncaught ReferenceError: esriConfig is not defined 這個錯誤的完整程式碼。這個錯誤的確是因為 esriConfig.apiKey 設定的位置不對，需要在 ArcGIS API 的 config 模組載入後才進行設定。
+
+請您使用下面這個完整且修正過的版本。我已經將 API Key 的設定移到了 require 函式的回呼 (callback) 內部，並確保了 esri/config 模組的正確載入。
+
+HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>可選建物圖層的地圖 (從JSON載入 - API Key修正)</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css" />
+  <script src="https://js.arcgis.com/4.28/"></script>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #layerControlPanel {
+      position: absolute;
+      top: 75px;
+      left: 15px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
+      width: 300px;
+      font-family: Arial, sans-serif;
+      font-size: 0.9em;
+    }
+    #layerControlPanel h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    #layerControlPanel label {
+      display: block;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+     #layerControlPanel input[type="checkbox"] {
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div id="viewDiv"></div>
+  <div id="layerControlPanel">
+    <h4>選擇建物圖層</h4>
+    </div>
+
+  <script>
+    
     require([
+      "esri/config", 
       "esri/Map",
       "esri/views/SceneView",
       "esri/layers/SceneLayer",
       "esri/widgets/Search"
-    ], (Map, SceneView, SceneLayer, Search) => {
-
+    ], (esriConfig, Map, SceneView, SceneLayer, Search)
+    
+      esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurOktuVso65_h5t30DueoxvniWhyRImyuVw9iC5hCsYvK-JbAA_QaIyQ1hYLek3gdQq6YOaHmMV2iRS0lWEbkoMFQ35Wd3e7M-Hr4cIizp25VzktN-pqXjikcDap_qvcJ_IKU98scSRKkBOqOZjhKZK7riEXEK3W8hvv5hKe5IUdBKgwGtVBG-0Ik4iJ4Kj7OFr5o10va9-5E_ZmEQaTEAv8.AT1_Xf9yOhyw";
       const map = new Map({
         basemap: "osm",
         ground: "world-elevation"
