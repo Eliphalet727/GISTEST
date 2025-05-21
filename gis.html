@@ -10,17 +10,22 @@
 <body>
   <div id="viewDiv"></div>
   <script>
-    esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurOktuVso65_h5t30DueoxvniWhyRImyuVw9iC5hCsYvK-JbAA_QaIyQ1hYLek3gdQq6YOaHmMV2iRS0lWEbkoMFQ35Wd3e7M-Hr4cIizp25VzktN-pqXjikcDap_qvcJ_IKU98scSRKkBOqOZjhKZK7riEXEK3W8hvv5hKe5IUdBKgwGtVBG-0Ik4iJ4Kj7OFr5o10va9-5E_ZmEQaTEAv8.AT1_Xf9yOhyw";
+  
     require([
+      "esri/config",
       "esri/Map",
       "esri/views/SceneView",
       "esri/layers/SceneLayer",
       "esri/widgets/Search"
-    ], (Map, SceneView, SceneLayer, Search) => {
+    ], (esriConfig, Map, SceneView, SceneLayer, Search) => {
+
+      esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurOktuVso65_h5t30DueoxvniWhyRImyuVw9iC5hCsYvK-JbAA_QaIyQ1hYLek3gdQq6YOaHmMV2iRS0lWEbkoMFQ35Wd3e7M-Hr4cIizp25VzktN-pqXjikcDap_qvcJ_IKU98scSRKkBOqOZjhKZK7riEXEK3W8hvv5hKe5IUdBKgwGtVBG-0Ik4iJ4Kj7OFr5o10va9-5E_ZmEQaTEAv8.AT1_Xf9yOhyw";
+
       const map = new Map({
         basemap: "osm",
         ground: "world-elevation"
       });
+
       const buildingLayer = new SceneLayer({
         url: "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/5"
       });
@@ -35,23 +40,28 @@
           heading: 50
         }
       });
+
       const searchWidget = new Search({
         view: view
       });
+
       view.ui.add(searchWidget, {
         position: "top-right",
         index: 0
       });
+
       buildingLayer.load().then(() => {
         console.log("SceneLayer (建物圖層) 已載入");
       }).catch(error => {
         console.error("SceneLayer (建物圖層) 載入失敗：", error);
       });
+
       view.when(() => {
         console.log("SceneView is ready.");
       }).catch(error => {
         console.error("SceneView failed to load: ", error);
       });
+
     });
   </script>
 </body>
