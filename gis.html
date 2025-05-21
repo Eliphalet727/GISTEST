@@ -98,7 +98,7 @@
       const checkboxListContainerDiv = document.getElementById("layerCheckboxListContainer");
       const activeBuildingLayers = {};
 
-      fetch('layers-config.json')
+      fetch('Service.json')
         .then(response => {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status} - 無法載入 layers-config.json`);
