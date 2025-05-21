@@ -1,0 +1,212 @@
+{
+  "LAYERS": {
+    "BUILDING": [
+      {
+        "Name": "臺北市建物模型 (Taipei City Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/0"
+      },
+      {
+        "Name": "臺中市建物模型 (Taichung City Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/1"
+      },
+      {
+        "Name": "基隆市建物模型 (Keelung City Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/2"
+      },
+      {
+        "Name": "臺南市建物模型 (Tainan City Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/3"
+      },
+      {
+        "Name": "高雄市建物模型 (Kaohsiung City Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/4"
+      },
+      {
+        "Name": "新北市建物模型 (New Taipei City Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/5"
+      },
+      {
+        "Name": "宜蘭縣建物模型 (Yilan City Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/6"
+      },
+      {
+        "Name": "桃園市建物模型 (Taoyuan City Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/7"
+      },
+      {
+        "Name": "嘉義市建物模型 (Chiayi City Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/8"
+      },
+      {
+        "Name": "新竹縣建物模型 (Hsinchu County Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/9"
+      },
+      {
+        "Name": "苗栗縣建物模型 (Miaoli County Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/10"
+      },
+      {
+        "Name": "南投縣建物模型 (Nantou County Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/11"
+      },
+      {
+        "Name": "彰化縣建物模型 (Changhua County Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/12"
+      },
+      {
+        "Name": "新竹市建物模型 (Hsinchu City Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/13"
+      },
+      {
+        "Name": "雲林縣建物模型 (Yunlin County Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/14"
+      },
+      {
+        "Name": "嘉義縣建物模型 (Chiayi County Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/15"
+      },
+      {
+        "Name": "屏東縣建物模型 (Pingtung County Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/16"
+      },
+      {
+        "Name": "花蓮縣建物模型 (Hualien County Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/17"
+      },
+      {
+        "Name": "臺東縣建物模型 (Taitung County Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/18"
+      },
+      {
+        "Name": "金門縣建物模型 (Kinmen County Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/19"
+      },
+      {
+        "Name": "澎湖縣建物模型 (Penghu County Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/20"
+      },
+      {
+        "Name": "連江縣建物模型 (Lienchiang County Building Model)",
+        "Url": "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/21"
+      }
+    ],
+    "ROAD": [
+      {
+        "Name": "臺北市一般道路_原始成果版 (Taipei City Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/0"
+      },
+      {
+        "Name": "臺中市一般道路_原始成果版 (Taichung City Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/1"
+      },
+      {
+        "Name": "基隆市一般道路_原始成果版 (Keelung City Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/2"
+      },
+      {
+        "Name": "臺南市一般道路_原始成果版 (Tainan City Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/3"
+      },
+      {
+        "Name": "高雄市一般道路_原始成果版 (Kaosiung City Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/4"
+      },
+      {
+        "Name": "新北市一般道路_原始成果版 (New Taipei City Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/5"
+      },
+      {
+        "Name": "桃園市一般道路_原始成果版 (Taoyuan City Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/7"
+      },
+      {
+        "Name": "新竹縣一般道路_原始成果版 (Hsinchu County Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/9"
+      },
+      {
+        "Name": "苗栗縣一般道路_原始成果版 (Miaoli County Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/10"
+      },
+      {
+        "Name": "新竹市一般道路_原始成果版 (Hsinchu City Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/13"
+      },
+      {
+        "Name": "臺東縣一般道路_原始成果版 (Taitung County Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/18"
+      },
+      {
+        "Name": "國道_原始成果版 (National Expressways Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/22"
+      },
+      {
+        "Name": "快速道路_原始成果版 (Expressways Road Model-Original)",
+        "Url": "https://i3s.nlsc.gov.tw/road/i3s/SceneServer/layers/23"
+      }
+    ],
+    "ROAD2ND": [
+      {
+        "Name": "臺北市一般道路_地形貼合版 (Taipei City Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/0"
+      },
+      {
+        "Name": "臺中市一般道路_地形貼合版 (Taichung City Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/1"
+      },
+      {
+        "Name": "基隆市一般道路_地形貼合版 (Keelung City Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/2"
+      },
+      {
+        "Name": "臺南市一般道路_地形貼合版 (Tainan City Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/3"
+      },
+      {
+        "Name": "高雄市一般道路_地形貼合版 (Kaosiung City Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/4"
+      },
+      {
+        "Name": "新北市一般道路_地形貼合版 (New Taipei City Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/5"
+      },
+      {
+        "Name": "桃園市一般道路_地形貼合版 (Taoyuan City Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/7"
+      },
+      {
+        "Name": "新竹縣一般道路_地形貼合版 (Hsinchu County Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/9"
+      },
+      {
+        "Name": "苗栗縣一般道路_地形貼合版 (Miaoli County Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/10"
+      },
+      {
+        "Name": "新竹市一般道路_地形貼合版 (Hsinchu City Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/13"
+      },
+      {
+        "Name": "臺東縣一般道路_地形貼合版 (Taitung County Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/18"
+      },
+      {
+        "Name": "國道_地形貼合版 (National Expressways Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/22"
+      },
+      {
+        "Name": "快速道路_地形貼合版 (Expressways Road Model-Terrain Fitting)",
+        "Url": "https://i3s.nlsc.gov.tw/road2nd/i3s/SceneServer/layers/23"
+      }
+    ],
+    "地形(測試用) TERRAIN(Trial)": [
+      {
+        "Name": "Terrain20M_正射影像 (Orthophoto)",
+        "Url": "https://i3s.nlsc.gov.tw/terrain/Terrain20M/i3s/SceneServer/layers/0"
+      },
+      {
+        "Name": "Terrain20M_電子地圖 (e-Map)",
+        "Url": "https://i3s.nlsc.gov.tw/terrain/Terrain20M/i3s/SceneServer/layers/1"
+      }
+    ]
+  }
+}
