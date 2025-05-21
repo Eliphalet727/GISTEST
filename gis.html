@@ -1,73 +1,58 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta
-    name="新北市3D建物圖"
-    content="initial-scale=1,maximum-scale=1,user-scalable=no"
-  />
-  <title>"新北市3D建物圖"</title>
-  <style>
-    html,
-    body,
-    #viewDiv {
-      padding: 0;
-      margin: 0;
-      height: 100%;
-      width: 100%;
-    }
-  </style>
-
-  <link
-    rel="stylesheet"
-    href="https://js.arcgis.com/4.28/esri/themes/light/main.css"
-  />
+  <title>三維建物與OSM街道圖 (含搜尋框與API Key)</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css" />
   <script src="https://js.arcgis.com/4.28/"></script>
-
+  <style>html,body,#viewDiv{padding:0;margin:0;width:100%;height:100%;}</style>
+</head>
+<body>
+  <div id="viewDiv"></div>
   <script>
+    esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurOktuVso65_h5t30DueoxvniWhyRImyuVw9iC5hCsYvK-JbAA_QaIyQ1hYLek3gdQq6YOaHmMV2iRS0lWEbkoMFQ35Wd3e7M-Hr4cIizp25VzktN-pqXjikcDap_qvcJ_IKU98scSRKkBOqOZjhKZK7riEXEK3W8hvv5hKe5IUdBKgwGtVBG-0Ik4iJ4Kj7OFr5o10va9-5E_ZmEQaTEAv8.AT1_Xf9yOhyw";
     require([
       "esri/Map",
       "esri/views/SceneView",
       "esri/layers/SceneLayer",
-      "esri/widgets/Search" 
-    ], (
-      Map,
-      SceneView,
-      SceneLayer,
-      Search 
-    ) => {
+      "esri/widgets/Search"
+    ], (Map, SceneView, SceneLayer, Search) => {
       const map = new Map({
-        basemap: "osm/streets-relief", 
+        basemap: "osm",
         ground: "world-elevation"
       });
+      const buildingLayer = new SceneLayer({
+        url: "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/5"
+      });
+      map.add(buildingLayer);
 
       const view = new SceneView({
         container: "viewDiv",
         map: map,
         camera: {
-          position: [121.5525424, 25.0250296, 707],
-          tilt: 81,
+          position: [121.5525, 25.0250, 1500],
+          tilt: 45,
           heading: 50
         }
       });
-
-      const sceneLayer = new SceneLayer({
-        url: "https://i3s.nlsc.gov.tw/building/i3s/SceneServer/layers/5"
-      });
-      map.add(sceneLayer);
-
       const searchWidget = new Search({
         view: view
       });
-
       view.ui.add(searchWidget, {
         position: "top-right",
-        index: 0 
+        index: 0
+      });
+      buildingLayer.load().then(() => {
+        console.log("SceneLayer (建物圖層) 已載入");
+      }).catch(error => {
+        console.error("SceneLayer (建物圖層) 載入失敗：", error);
+      });
+      view.when(() => {
+        console.log("SceneView is ready.");
+      }).catch(error => {
+        console.error("SceneView failed to load: ", error);
       });
     });
   </script>
-</head>
-
-<body>
-  <div id="viewDiv"></div>
 </body>
 </html>
